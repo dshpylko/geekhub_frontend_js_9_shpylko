@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HW_1_2</title>
+    <style type="text/css">
+        legend, .bold_text {
+            font-weight: bold;
+        }
+        select {
+            width: 170px
+        }
+        .italic {
+            font-weight: normal;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <form action="https://echo.htmlacademy.ru" method="post">
+        <fieldset>
+            <legend>Коротко о себе</legend>
+            <p>
+                <label for="first_name_field">Имя:</label>
+                <input type="text" name="first_name" id="first_name_field" size="35">
+            </p>
+            <p>
+                <label for="last_name_field">Фамилия:</label>
+                <input type="text" name="last_name" id="last_name_field" size="35">
+            </p>
+            <p>
+                <label for="gender">Пол:</label>
+                <input type="radio" name="user_gender" value="male" id="gender" checked> мужской
+                <input type="radio" name="user_gender" value="female"> женский
+            </p>
+            <p>
+                <label for="age_field">Возраст:</label>
+                <input type="text" name="user_age" id="age_field" size="3"> лет 
+            </p>
+        </fieldset>
+        <br> 
+        <fieldset>
+            <legend>Подробнее о себе</legend>
+            <div>
+                <input type="radio" name="user_type" value="user_type_boy" id="user_type_1" checked>
+                <label for="user_type_1">Молодой человек</label>
+                <br> 
+                <input type="radio" name="user_type" value="user_type_girl" id="user_type_2"> 
+                <label for="user_type_2">Девушка</label>
+                <br>
+                <input type="text" name="date_of_birth" id="birthday">
+                <label for="birthday"> Дата рождения</label>
+                <br>
+                <input type="text" name="family" id="family_condition"> 
+                <label for="family_condition"> Семейное положение</label>
+                <br>
+                <input type="text" name="social" id="social_status"> 
+                <label for="social_status"> Социальный статус</label>
+                <br>
+                <input type="text" name="location_info" id="location"> 
+                <label for="location">Местожительство</label>
+            </div>
+            <p class="bold_text">Что вы обычно делаете на выходных:</p>
+            <p>
+                <input type="checkbox" name="activity_info_1" value="act_inf_1" id="activity_1">
+                <label for="activity_1"> Сплю </label>
+                <br>
+                <input type="checkbox" name="activity_info_2" value="act_inf_2" id="activity_2">
+                <label for="activity_2"> Гуляю с друзьями </label> 
+                <br>
+                <input type="checkbox" name="activity_info_3" value="act_inf_3" id="activity_3">
+                <label for="activity_3"> Хожу на рыбалку </label>  
+                <br>
+                <input type="checkbox" name="activity_info_4" value="act_inf_4" id="activity_4">
+                <label for="activity_4"> Играю в игры </label> 
+            </p>
+            <p class="bold_text">Рассказать о формах в книге, посвященной HTML:</p>
+                <p>
+                    <select name="theme">
+                        <option value="Site frequency:">Site frequency:</option>
+                        <option value="Another option:">Another option</option>
+                    </select>
+                </p>
+            <p class="bold_text">Сколько книг вы прочитали за свою жизнь:</p>
+                <input type="radio" name="books_info" value="read_books_info_1" id="read_book_1">
+                <label for="read_book_1"> 0-10 </label>
+                <br>
+                <input type="radio" name="books_info" value="read_books_info_2" id="read_book_2">
+                <label for="read_book_2"> 11-20 </label> 
+                <br>
+                <input type="radio" name="books_info" value="read_books_info_3" id="read_book_3">
+                <label for="read_book_3"> 21-50 </label>  
+                <br>
+                <input type="radio" name="books_info" value="read_books_info_4" id="read_book_4">
+                <label for="read_book_4"> 50+ </label> 
+                <p class="bold_text">
+                    <label for="comments">Ваши коммментарии:</label><br>
+                    <textarea rows="10" cols="60" name="text" id="comments"></textarea>
+                </p>
+                <p>
+                    <select size="3" multiple name="order">
+                        <option value="first_option">Первая позиция</option>
+                        <option selected value="second_option">Вторая позиция</option>
+                        <option value="third_option">Третья позиция</option>
+                    </select>
+                </p>
+        </fieldset>
+        <br> 
+        <fieldset>
+            <legend>И в заключении</legend>
+            <input type="text" name="strange_field" size="40" placeholder="Это поле было введено до вас">
+            <p class="bold_text">
+                <label for="email_field"> Email: </label> <br>
+                <input type="email" name="email" id="email_field" size="40">
+            </p>
+            <p class="bold_text">Хотите подписаться на самую модную рассылку спама?<br>
+            <span class="italic">Выберите категории</span></p>
+            <p>
+                <input type="checkbox" name="subscribe_type_1" value="subscribe_1" id="subs_1">
+                <label for="subs_1"> Обрудование</label>
+                <br>
+                <input type="checkbox" name="subscribe_type_2" value="subscribe_2" id="subs_2">
+                <label for="subs_2"> Как приготовить обеды</label> 
+                <br>
+                <input type="checkbox" name="subscribe_type_3" value="subscribe_3" id="subs_3">
+                <label for="subs_3"> Заработай миллион за два дня!</label>
+            </p>  
+            <p class="bold_text">На сколько сложная задача:</p>
+                <input type="radio" name="exercise level" value="level_1" checked> Совсем нет<br>
+                <input type="radio" name="exercise level" value="level_2"> Так себе<br>
+                <input type="radio" name="exercise level" value="level_3"> Еле справились
+        </fieldset>
+        <p>
+            <input type="submit" value="Отправить">
+        </p>
+    </form>
+</body>
+</html>
