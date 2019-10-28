@@ -16,6 +16,12 @@
             font-weight: normal;
             font-style: italic;
         }
+        input[type=number]{
+            width: 50px;
+        } 
+        input[type=date]{
+            width: 168px;
+        }
     </style>
 </head>
 <body>
@@ -37,7 +43,7 @@
             </p>
             <p>
                 <label for="age_field">Возраст:</label>
-                <input type="text" name="user_age" id="age_field" size="3"> лет 
+                <input type="number" name="user_age" id="age_field" size="3"> лет 
             </p>
         </fieldset>
         <br> 
@@ -50,8 +56,8 @@
                 <input type="radio" name="user_type" value="user_type_girl" id="user_type_2"> 
                 <label for="user_type_2">Девушка</label>
                 <br>
-                <input type="text" name="date_of_birth" id="birthday">
-                <label for="birthday"> Дата рождения</label>
+                <input type="date" name="date_of_birth" id="birthday">
+                <label for="birthday">Дата рождения</label>
                 <br>
                 <input type="text" name="family" id="family_condition"> 
                 <label for="family_condition"> Семейное положение</label>
@@ -84,17 +90,19 @@
                     </select>
                 </p>
             <p class="bold_text">Сколько книг вы прочитали за свою жизнь:</p>
-                <input type="radio" name="books_info" value="read_books_info_1" id="read_book_1">
-                <label for="read_book_1"> 0-10 </label>
-                <br>
-                <input type="radio" name="books_info" value="read_books_info_2" id="read_book_2">
-                <label for="read_book_2"> 11-20 </label> 
-                <br>
-                <input type="radio" name="books_info" value="read_books_info_3" id="read_book_3">
-                <label for="read_book_3"> 21-50 </label>  
-                <br>
-                <input type="radio" name="books_info" value="read_books_info_4" id="read_book_4">
-                <label for="read_book_4"> 50+ </label> 
+                <p>
+                    <input type="radio" name="books_info" value="read_books_info_1" id="read_book_1">
+                    <label for="read_book_1"> 0-10 </label>
+                    <br>
+                    <input type="radio" name="books_info" value="read_books_info_2" id="read_book_2">
+                    <label for="read_book_2"> 11-20 </label> 
+                    <br>
+                    <input type="radio" name="books_info" value="read_books_info_3" id="read_book_3">
+                    <label for="read_book_3"> 21-50 </label>  
+                    <br>
+                    <input type="radio" name="books_info" value="read_books_info_4" id="read_book_4">
+                    <label for="read_book_4"> 50+ </label> 
+                </p>
                 <p class="bold_text">
                     <label for="comments">Ваши коммментарии:</label><br>
                     <textarea rows="10" cols="60" name="text" id="comments"></textarea>
@@ -128,9 +136,11 @@
                 <label for="subs_3"> Заработай миллион за два дня!</label>
             </p>  
             <p class="bold_text">На сколько сложная задача:</p>
-                <input type="radio" name="exercise level" value="level_1" checked> Совсем нет<br>
-                <input type="radio" name="exercise level" value="level_2"> Так себе<br>
-                <input type="radio" name="exercise level" value="level_3"> Еле справились
+                <div>
+                    <input type="radio" name="exercise level" value="level_1" checked> Совсем нет<br>
+                    <input type="radio" name="exercise level" value="level_2"> Так себе<br>
+                    <input type="radio" name="exercise level" value="level_3"> Еле справились
+                </div>
         </fieldset>
         <p>
             <input type="submit" value="Отправить">
